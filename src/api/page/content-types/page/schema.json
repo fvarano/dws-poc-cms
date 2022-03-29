@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "versions": {
+      "versioned": true
+    },
+    "i18n": {
+      "localized": true
+    },
+    "fields-i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "url": {
+      "type": "string",
+      "regex": "^[^\\/][a-z\\-\\/]*[^\\/]$",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        },
+        "fields-i18n": {
+          "localized": true
+        }
+      }
+    },
+    "sites": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::site.site",
+      "inversedBy": "pages"
+    },
+    "brand": {
+      "type": "enumeration",
+      "enum": [
+        "alfa-romeo",
+        "fiat",
+        "fiat-professional",
+        "jeep",
+        "lancia",
+        "abarth"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        },
+        "fields-i18n": {
+          "localized": true
+        }
+      }
+    },
+    "template": {
+      "type": "dynamiczone",
+      "components": [
+        "templates.splash-page"
+      ],
+      "max": 1,
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        },
+        "fields-i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

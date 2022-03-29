@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_templates_splash_pages",
+  "info": {
+    "displayName": "Splash Page",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "dealerName": {
+      "type": "string",
+      "default": "(inherit)"
+    }
+  }
+}
